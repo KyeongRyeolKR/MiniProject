@@ -34,8 +34,14 @@ public class Main {
             }
             if(command.contains("삭제?id=")) {
                 int id = Integer.parseInt(command.substring(6,7));
-                posts.remove(id-1);
-                System.out.printf("%d번 명언이 삭제되었습니다.\n", id);
+                for(int i=0; i<posts.size(); i++) {
+                    if(posts.get(i).getId() == id) {
+                        posts.remove(i);
+                        System.out.printf("%d번 명언이 삭제되었습니다.\n", id);
+                        break;
+                    }
+                    System.out.printf("%d번 명언이 존재하지 않습니다.\n", id);
+                }
             }
         }
     }
