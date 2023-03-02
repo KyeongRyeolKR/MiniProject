@@ -1,4 +1,4 @@
-package org.example;
+package org.example.app.repository;
 
 import java.io.Serializable;
 
@@ -6,12 +6,6 @@ public class Post implements Serializable {
     private int id;
     private String author;
     private String content;
-
-    public Post(int id, String author, String content) {
-        this.id = id;
-        this.author = author;
-        this.content = content;
-    }
 
     public int getId() {
         return id;
