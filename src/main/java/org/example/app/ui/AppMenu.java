@@ -1,4 +1,4 @@
-package org.example.app.controller;
+package org.example.app.ui;
 
 import org.example.app.exception.NoInputPostIndexException;
 import org.example.app.exception.PostNotExistsException;
@@ -7,11 +7,11 @@ import org.example.app.service.AppService;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class AppController {
+public class AppMenu {
     Scanner sc;
     AppService appService;
 
-    public AppController() {
+    public AppMenu() {
         this.sc = new Scanner(System.in);
         this.appService = new AppService();
     }

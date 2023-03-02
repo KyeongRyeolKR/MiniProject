@@ -2,7 +2,7 @@ package org.example.app.service;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.example.app.repository.Post;
+import org.example.app.entity.Post;
 import org.example.app.exception.MenuType;
 import org.example.app.exception.NoInputPostIndexException;
 import org.example.app.exception.PostNotExistsException;

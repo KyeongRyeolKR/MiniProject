@@ -1,4 +1,4 @@
-package org.example.app.repository;
+package org.example.app.entity;
 
 import java.io.Serializable;
 
