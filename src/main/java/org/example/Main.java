@@ -32,6 +32,11 @@ public class Main {
                     System.out.printf("%d / %s / %s\n", posts.get(i).getId(), posts.get(i).getAuthor(), posts.get(i).getContent());
                 }
             }
+            if(command.contains("삭제?id=")) {
+                int id = Integer.parseInt(command.substring(6,7));
+                posts.remove(id-1);
+                System.out.printf("%d번 명언이 삭제되었습니다.\n", id);
+            }
         }
     }
 }
