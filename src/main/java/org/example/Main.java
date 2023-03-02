@@ -1,5 +1,8 @@
 package org.example;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +70,24 @@ public class Main {
                     }
                     System.out.printf("%d번 명언이 존재하지 않습니다.\n", id);
                 }
+            }
+            if(command.equals("빌드")) {
+                JSONArray outer = new JSONArray();
+                for(Post post : posts) {
+                    JSONObject inner = new JSONObject();
+                    inner.put("id", post.getId());
+                    inner.put("content", post.getContent());
+                    inner.put("author", post.getAuthor());
+                    outer.add(inner);
+                }
+
+                String buildName = "data.json";
+                FileWriter fileWriter = new FileWriter(buildName);
+                fileWriter.write(outer.toJSONString());
+                fileWriter.flush();
+                fileWriter.close();
+
+                System.out.printf("%s 파일의 내용이 갱신되었습니다.\n", buildName);
             }
         }
     }
