@@ -7,11 +7,11 @@ import org.example.app.service.AppService;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class AppMenu {
+public class AppController {
     Scanner sc;
     AppService appService;
 
-    public AppMenu() {
+    public AppController() {
         this.sc = new Scanner(System.in);
         this.appService = new AppService();
     }

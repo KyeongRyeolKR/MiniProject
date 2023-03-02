@@ -1,6 +1,6 @@
 package org.example.app;
 
-import org.example.app.controller.AppMenu;
+import org.example.app.controller.AppController;
 
 public class Application {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class Application {
     }
 
     public void startApp() {
-        AppMenu appMenu = new AppMenu();
-        appMenu.start();
+        AppController appController = new AppController();
+        appController.start();
     }
 }
